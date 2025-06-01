@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility High Contrast Theme */
+.accessibility-high-contrast {
+  --background: 0 0% 0%; /* Pure black */
+  --foreground: 0 0% 100%; /* Pure white */
+  --card: 0 0% 5%; /* Very dark gray */
+  --card-foreground: 0 0% 100%; /* Pure white */
+  --primary: 60 100% 50%; /* Bright yellow */
+  --primary-foreground: 0 0% 0%; /* Pure black */
+  --secondary: 0 0% 15%; /* Dark gray */
+  --secondary-foreground: 0 0% 100%; /* Pure white */
+  --border: 0 0% 20%; /* Dark gray border */
+  --ring: 60 100% 50%; /* Bright yellow focus ring */
+}
+
+.accessibility-high-contrast * {
+  color: inherit !important;
+}
+
+/* Enhanced focus indicators */
+.accessibility-focus-indicators *:focus {
+  outline: 3px solid hsl(var(--ring)) !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced motion */
+.accessibility-reduced-motion * {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Font size variations */
+.font-small { font-size: 0.875rem; }
+.font-medium { font-size: 1rem; }
+.font-large { font-size: 1.125rem; }
+.font-extra-large { font-size: 1.25rem; }
+
+/* React Big Calendar Custom Styling */
+.rbc-calendar {
+  background-color: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.rbc-header {
+  background-color: #f9fafb !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 12px 8px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  font-size: 14px !important;
+}
+
+.rbc-time-view {
+  border: none !important;
+}
+
+.rbc-time-content {
+  border-top: none !important;
+}
+
+.rbc-time-gutter {
+  background-color: #f9fafb !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+.rbc-time-slot {
+  border-top: 1px solid #f3f4f6 !important;
+  background-color: white !important;
+}
+
+.rbc-timeslot-group {
+  border-bottom: 1px solid #e5e7eb !important;
+  background-color: white !important;
+}
+
+.rbc-day-slot {
+  background-color: white !important;
+  border-left: 1px solid #f3f4f6 !important;
+}
+
+.rbc-day-slot:hover {
+  background-color: #f8fafc !important;
+  cursor: pointer !important;
+}
+
+.rbc-time-header {
+  border-bottom: 1px solid #e5e7eb !important;
+  background-color: #f9fafb !important;
+}
+
+.rbc-time-header-cell {
+  border-left: 1px solid #e5e7eb !important;
+}
+
+.rbc-time-header-content {
+  border-left: none !important;
+}
+
+.rbc-allday-cell {
+  background-color: #f3f4f6 !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.rbc-label {
+  color: #6b7280 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 4px 8px !important;
+}
+
+.rbc-event {
+  border: none !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 2px 6px !important;
+}
+
+.rbc-event:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-1px) !important;
+  transition: all 0.2s ease !important;
+}
+
+.rbc-selected {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.rbc-today {
+  background-color: #fef3c7 !important;
+}
+
+.rbc-off-range {
+  background-color: #f9fafb !important;
+  color: #9ca3af !important;
+}
+
+.rbc-off-range-bg {
+  background-color: #f9fafb !important;
+}
+
+.rbc-toolbar {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 16px !important;
+}
+
+.rbc-btn-group {
+  display: none !important;
+}
+
+.rbc-toolbar button {
+  display: none !important;
+}
+
+/* Remove white overlay issues */
+.rbc-overlay {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.rbc-overlay-header {
+  background-color: transparent !important;
+}
+
+/* Week view specific styling */
+.rbc-time-view .rbc-time-gutter,
+.rbc-time-view .rbc-time-content,
+.rbc-time-view .rbc-time-header {
+  border-color: #e5e7eb !important;
+}
+
+.rbc-current-time-indicator {
+  background-color: #ef4444 !important;
+  height: 2px !important;
+}
+
+/* Slot selection styling */
+.rbc-slot-selecting {
+  background-color: #dbeafe !important;
+  border: 2px solid #3b82f6 !important;
+}
+
+.rbc-slot-selection {
+  background-color: #bfdbfe !important;
+  border: 2px solid #2563eb !important;
+}
+
+/* Tutorial Tooltip CSS */
+.tutorial-highlight {
+  position: relative;
+  z-index: 60;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5), 0 0 0 8px rgba(59, 130, 246, 0.25);
+  animation: tutorial-pulse 2s infinite;
+  border-radius: 4px;
+}
+
+@keyframes tutorial-pulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5), 0 0 0 8px rgba(59, 130, 246, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.75), 0 0 0 10px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5), 0 0 0 8px rgba(59, 130, 246, 0.25);
+  }
+}
+
+/* Tutorial character container */
+.tutorial-character {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tutorial-character svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tooltip animations */
+.tutorial-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.tutorial-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.tutorial-exit {
+  opacity: 1;
+}
+
+.tutorial-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+:root {
+      --background: 0 0% 100%;
+--foreground: 20 14.3% 4.1%;
+--muted: 60 4.8% 95.9%;
+--muted-foreground: 25 5.3% 44.7%;
+--popover: 0 0% 100%;
+--popover-foreground: 20 14.3% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 20 14.3% 4.1%;
+--border: 20 5.9% 90%;
+--input: 20 5.9% 90%;
+--primary: 207 90% 54%;
+--primary-foreground: 211 100% 99%;
+--secondary: 60 4.8% 95.9%;
+--secondary-foreground: 24 9.8% 10%;
+--accent: 60 4.8% 95.9%;
+--accent-foreground: 24 9.8% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 60 9.1% 97.8%;
+--ring: 20 14.3% 4.1%;
+--radius: 0.5rem;
+  }
+  .dark {
+      --background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--primary: 207 90% 54%;
+--primary-foreground: 211 100% 99%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--ring: 240 4.9% 83.9%;
+--radius: 0.5rem;
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* We'll take a simpler approach for now */
